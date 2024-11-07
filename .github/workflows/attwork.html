@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATT_QUALITY_ITEMS_Task Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Rolling Update Bar -->
+    <div class="update-bar">
+        <marquee behavior="scroll" direction="left">
+            Priority Task 1: Fix critical bug  | Task 2: Update  project status | Task 3: Design pipeline
+        </marquee>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>ATT_Quality_Items Tasks Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Dept</th>
+                    <th>Tasks</th>
+                    <th>Handled By</th>
+                    <th>ETA</th>
+                    <th>Comments</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>DBA</td>
+                    <td>Fix Critical Bug</td>
+                    <td>---</td>
+                    <td>12/11/2024</td>
+                    <td>Urgent issue impacting users</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>CC</td>
+                    <td>Update Client</td>
+                    <td>---</td>
+                    <td>19/11/2024</td>
+                    <td>Prepare presentation</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>INT</td>
+                    <td>Design Homepage</td>
+                    <td>---</td>
+                    <td>16/11/2024</td>
+                    <td>Initial draft ready</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>DBA</td>
+                    <td>Setup main Server</td>
+                    <td>---</td>
+                    <td>15/11/2024</td>
+                    <td>Preliminary setup complete</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    padding: 0;
+}
+
+/* Update Bar Styling */
+.update-bar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+marquee {
+    font-size: 16px;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f7fc;
+    color: #007bff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Link Styling */
+table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+
