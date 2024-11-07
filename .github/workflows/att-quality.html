@@ -1,43 +1,158 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATT_QUALITY_ITEMS_Task Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+    <!-- Rolling Update Bar -->
+    <div class="update-bar">
+        <marquee behavior="scroll" direction="left">
+            Priority Task 1: Fix critical bug  | Task 2: Update  project status | Task 3: Design pipeline
+        </marquee>
+    </div>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    <!-- Main Content -->
+    <div class="container">
+        <h1>ATT_Quality_Items Tasks Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Dept</th>
+                    <th>Tasks</th>
+                    <th>Handled By</th>
+                    <th>ETA</th>
+                    <th>Comments</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>DBA</td>
+                    <td>Fix Critical Bug</td>
+                    <td>---</td>
+                    <td>12/11/2024</td>
+                    <td>Urgent issue impacting users</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>CC</td>
+                    <td>Update Client</td>
+                    <td>---</td>
+                    <td>19/11/2024</td>
+                    <td>Prepare presentation</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>INT</td>
+                    <td>Design Homepage</td>
+                    <td>---</td>
+                    <td>16/11/2024</td>
+                    <td>Initial draft ready</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>DBA</td>
+                    <td>Setup main Server</td>
+                    <td>---</td>
+                    <td>15/11/2024</td>
+                    <td>Preliminary setup complete</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+</body>
+</html>
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    padding: 0;
+}
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+/* Update Bar Styling */
+.update-bar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+marquee {
+    font-size: 16px;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f7fc;
+    color: #007bff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Link Styling */
+table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
